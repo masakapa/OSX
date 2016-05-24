@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:OutlineView/OutlineView.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ArrayController/ArrayController.xcodeproj">
    </FileRef>
    <FileRef
