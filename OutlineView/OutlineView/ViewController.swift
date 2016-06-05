@@ -18,8 +18,12 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
 
         addData()
         outlineView.expandItem(nil, expandChildren: true)
+        
+        outlineView.registerForDraggedTypes([NSPasteboardTypeString])
+    
+    
     }
-
+    
     override var representedObject: AnyObject? {
         didSet {
         // Update the view, if already loaded.
@@ -33,7 +37,13 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
         ]
         
         let dict : NSMutableDictionary = NSMutableDictionary(dictionary: root)
-        dict.setObject([Playlist(),Playlist()], forKey: "children")
+        let p1 = Playlist()
+        p1.name = "P1"
+        let p2 = Playlist()
+        p2.name = "P2"
+        let p3 = Playlist()
+        p3.name = "p3"
+        dict.setObject([p1,p2,p3], forKey: "children")
         treeController.addObject(dict)
         
     }
@@ -56,6 +66,65 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
         }
     }
     
+    // MARK: - Datasource
+    
+    func outlineView(outlineView: NSOutlineView, pasteboardWriterForItem item: AnyObject) -> NSPasteboardWriting? {
+        let pbItem = NSPasteboardItem()
+        
+        if let playList = ((item as? NSTreeNode)?.representedObject) as? Playlist {
+            pbItem.setString(playList.name, forType: NSPasteboardTypeString)
+            return pbItem
+        }
+        
+        return nil
+    }
+    
+    func outlineView(outlineView: NSOutlineView, validateDrop info: NSDraggingInfo, proposedItem item: AnyObject?, proposedChildIndex index: Int) -> NSDragOperation {
+        let canDrag = index>=0 && item != nil
+        if canDrag {
+            return.Move
+        }else{
+            return .None
+        }
+        
+    }
+    
+    
+    func outlineView(outlineView: NSOutlineView, acceptDrop info: NSDraggingInfo, item: AnyObject?, childIndex index: Int) -> Bool {
+        let pb = info.draggingPasteboard()
+        let name = pb.stringForType(NSPasteboardTypeString)
+        
+        var sourcenode : NSTreeNode?
+        
+        if let item = item as? NSTreeNode where item.childNodes != nil {
+            for node in item.childNodes! {
+                if let playlist = node.representedObject as? Playlist {
+                    if playlist.name == name {
+                        sourcenode = node
+                    }
+                }
+            }
+        }
+        if sourcenode == nil {
+            return false
+        }
+        
+        let fromIndexPath = treeController.selectionIndexPath
+        
+        let indexArr : [Int] = [0, index]
+        let toIndexPath  = NSIndexPath(indexes: indexArr, length: 2)
+        treeController.moveNode(sourcenode!, toIndexPath: toIndexPath)
+        
+        undoManager?.prepareWithInvocationTarget(self).reverse(sourcenode, fromIndexPath: fromIndexPath)
+        undoManager?.setActionName("Mov")
+        
+        return true
+    }
+    
+    
+    func reverse(sourceNode : NSTreeNode?, fromIndexPath: NSIndexPath?) {
+        treeController.moveNode(sourceNode!, toIndexPath: fromIndexPath!)
+    }
     
 
 }
