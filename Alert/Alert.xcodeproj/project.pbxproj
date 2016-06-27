@@ -7,13 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		767087941D20B964005E6DB1 /* AlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767087931D20B964005E6DB1 /* AlertUITests.swift */; };
+		767087A21D20C007005E6DB1 /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767087A11D20C007005E6DB1 /* AlertTests.swift */; };
+		767087AA1D20C109005E6DB1 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767087A91D20C109005E6DB1 /* Song.swift */; };
+		767087AC1D20C1BE005E6DB1 /* SongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767087AB1D20C1BE005E6DB1 /* SongTests.swift */; };
+		767087AE1D20C25B005E6DB1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767087AD1D20C25B005E6DB1 /* Constants.swift */; };
 		7A2E0EB91D1E8ADC00639666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E0EB81D1E8ADC00639666 /* AppDelegate.swift */; };
 		7A2E0EBB1D1E8ADC00639666 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E0EBA1D1E8ADC00639666 /* ViewController.swift */; };
 		7A2E0EBD1D1E8ADC00639666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E0EBC1D1E8ADC00639666 /* Assets.xcassets */; };
 		7A2E0EC01D1E8ADC00639666 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E0EBE1D1E8ADC00639666 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		767087961D20B964005E6DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A2E0EAD1D1E8ADC00639666 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A2E0EB41D1E8ADC00639666;
+			remoteInfo = Alert;
+		};
+		767087A41D20C007005E6DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A2E0EAD1D1E8ADC00639666 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A2E0EB41D1E8ADC00639666;
+			remoteInfo = Alert;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		767087911D20B964005E6DB1 /* AlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		767087931D20B964005E6DB1 /* AlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUITests.swift; sourceTree = "<group>"; };
+		767087951D20B964005E6DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7670879F1D20C007005E6DB1 /* AlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		767087A11D20C007005E6DB1 /* AlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTests.swift; sourceTree = "<group>"; };
+		767087A31D20C007005E6DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		767087A91D20C109005E6DB1 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		767087AB1D20C1BE005E6DB1 /* SongTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTests.swift; sourceTree = "<group>"; };
+		767087AD1D20C25B005E6DB1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7A2E0EB51D1E8ADC00639666 /* Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2E0EB81D1E8ADC00639666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A2E0EBA1D1E8ADC00639666 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +54,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7670878E1D20B964005E6DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7670879C1D20C007005E6DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A2E0EB21D1E8ADC00639666 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,10 +78,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		767087921D20B964005E6DB1 /* AlertUITests */ = {
+			isa = PBXGroup;
+			children = (
+				767087931D20B964005E6DB1 /* AlertUITests.swift */,
+				767087951D20B964005E6DB1 /* Info.plist */,
+			);
+			path = AlertUITests;
+			sourceTree = "<group>";
+		};
+		767087A01D20C007005E6DB1 /* AlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				767087A11D20C007005E6DB1 /* AlertTests.swift */,
+				767087AB1D20C1BE005E6DB1 /* SongTests.swift */,
+				767087A31D20C007005E6DB1 /* Info.plist */,
+				767087AD1D20C25B005E6DB1 /* Constants.swift */,
+			);
+			path = AlertTests;
+			sourceTree = "<group>";
+		};
 		7A2E0EAC1D1E8ADC00639666 = {
 			isa = PBXGroup;
 			children = (
 				7A2E0EB71D1E8ADC00639666 /* Alert */,
+				767087921D20B964005E6DB1 /* AlertUITests */,
+				767087A01D20C007005E6DB1 /* AlertTests */,
 				7A2E0EB61D1E8ADC00639666 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				7A2E0EB51D1E8ADC00639666 /* Alert.app */,
+				767087911D20B964005E6DB1 /* AlertUITests.xctest */,
+				7670879F1D20C007005E6DB1 /* AlertTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				7A2E0EB81D1E8ADC00639666 /* AppDelegate.swift */,
+				767087A91D20C109005E6DB1 /* Song.swift */,
 				7A2E0EBA1D1E8ADC00639666 /* ViewController.swift */,
 				7A2E0EBC1D1E8ADC00639666 /* Assets.xcassets */,
 				7A2E0EBE1D1E8ADC00639666 /* Main.storyboard */,
@@ -64,6 +134,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		767087901D20B964005E6DB1 /* AlertUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7670879A1D20B964005E6DB1 /* Build configuration list for PBXNativeTarget "AlertUITests" */;
+			buildPhases = (
+				7670878D1D20B964005E6DB1 /* Sources */,
+				7670878E1D20B964005E6DB1 /* Frameworks */,
+				7670878F1D20B964005E6DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				767087971D20B964005E6DB1 /* PBXTargetDependency */,
+			);
+			name = AlertUITests;
+			productName = AlertUITests;
+			productReference = 767087911D20B964005E6DB1 /* AlertUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7670879E1D20C007005E6DB1 /* AlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 767087A61D20C007005E6DB1 /* Build configuration list for PBXNativeTarget "AlertTests" */;
+			buildPhases = (
+				7670879B1D20C007005E6DB1 /* Sources */,
+				7670879C1D20C007005E6DB1 /* Frameworks */,
+				7670879D1D20C007005E6DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				767087A51D20C007005E6DB1 /* PBXTargetDependency */,
+			);
+			name = AlertTests;
+			productName = AlertTests;
+			productReference = 7670879F1D20C007005E6DB1 /* AlertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7A2E0EB41D1E8ADC00639666 /* Alert */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A2E0EC41D1E8ADC00639666 /* Build configuration list for PBXNativeTarget "Alert" */;
@@ -91,6 +197,14 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = AlphaTest;
 				TargetAttributes = {
+					767087901D20B964005E6DB1 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7A2E0EB41D1E8ADC00639666;
+					};
+					7670879E1D20C007005E6DB1 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7A2E0EB41D1E8ADC00639666;
+					};
 					7A2E0EB41D1E8ADC00639666 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -110,11 +224,27 @@
 			projectRoot = "";
 			targets = (
 				7A2E0EB41D1E8ADC00639666 /* Alert */,
+				767087901D20B964005E6DB1 /* AlertUITests */,
+				7670879E1D20C007005E6DB1 /* AlertTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7670878F1D20B964005E6DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7670879D1D20C007005E6DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A2E0EB31D1E8ADC00639666 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,16 +257,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7670878D1D20B964005E6DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767087941D20B964005E6DB1 /* AlertUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7670879B1D20C007005E6DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767087AC1D20C1BE005E6DB1 /* SongTests.swift in Sources */,
+				767087A21D20C007005E6DB1 /* AlertTests.swift in Sources */,
+				767087AE1D20C25B005E6DB1 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A2E0EB11D1E8ADC00639666 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				767087AA1D20C109005E6DB1 /* Song.swift in Sources */,
 				7A2E0EBB1D1E8ADC00639666 /* ViewController.swift in Sources */,
 				7A2E0EB91D1E8ADC00639666 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		767087971D20B964005E6DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A2E0EB41D1E8ADC00639666 /* Alert */;
+			targetProxy = 767087961D20B964005E6DB1 /* PBXContainerItemProxy */;
+		};
+		767087A51D20C007005E6DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A2E0EB41D1E8ADC00639666 /* Alert */;
+			targetProxy = 767087A41D20C007005E6DB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7A2E0EBE1D1E8ADC00639666 /* Main.storyboard */ = {
@@ -150,6 +312,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		767087981D20B964005E6DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AlertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miguo.AlertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Alert;
+			};
+			name = Debug;
+		};
+		767087991D20B964005E6DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AlertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miguo.AlertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Alert;
+			};
+			name = Release;
+		};
+		767087A71D20C007005E6DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miguo.AlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alert.app/Contents/MacOS/Alert";
+			};
+			name = Debug;
+		};
+		767087A81D20C007005E6DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miguo.AlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alert.app/Contents/MacOS/Alert";
+			};
+			name = Release;
+		};
 		7A2E0EC21D1E8ADC00639666 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -259,6 +471,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7670879A1D20B964005E6DB1 /* Build configuration list for PBXNativeTarget "AlertUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767087981D20B964005E6DB1 /* Debug */,
+				767087991D20B964005E6DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		767087A61D20C007005E6DB1 /* Build configuration list for PBXNativeTarget "AlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767087A71D20C007005E6DB1 /* Debug */,
+				767087A81D20C007005E6DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7A2E0EB01D1E8ADC00639666 /* Build configuration list for PBXProject "Alert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -275,6 +503,7 @@
 				7A2E0EC61D1E8ADC00639666 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

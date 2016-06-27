@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var label: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,13 +19,16 @@ class ViewController: NSViewController {
     }
 
     override func viewWillAppear() {
-        alert()
     }
     
     override var representedObject: AnyObject? {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    @IBAction func showAlert(sender: NSButton) {
+        alert()
     }
 
     
@@ -36,21 +41,22 @@ class ViewController: NSViewController {
         alert.addButtonWithTitle("好吧")
         
         alert.beginSheetModalForWindow(view.window!) { (response) in
-            print(response)
+                    switch response {
+                    case NSAlertFirstButtonReturn:
+                        self.label.stringValue = String(NSAlertFirstButtonReturn)
+                        print("好吧")
+                    case NSAlertSecondButtonReturn:
+                        self.label.stringValue = String(NSAlertSecondButtonReturn)
+                    case NSAlertThirdButtonReturn:
+                        self.label.stringValue = String(NSAlertThirdButtonReturn)
+                    default:
+                        break
+                    }
         }
         
 //        let result = alert.runModal()
 //        
-//        switch result {
-//        case NSAlertFirstButtonReturn:
-//            print(String(NSAlertFirstButtonReturn))
-//        case NSAlertSecondButtonReturn:
-//            print(String(NSAlertSecondButtonReturn))
-//        case NSAlertThirdButtonReturn:
-//            print(String(NSAlertThirdButtonReturn))
-//        default:
-//            break
-//        }
+
         
     }
     

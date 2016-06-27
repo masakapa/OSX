@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -11,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Alert" id="1Xt-HY-uBw">
+                            <menuItem title="ContainerView" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Alert" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="ContainerView" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Alert" id="5kV-Vb-QxS">
+                                        <menuItem title="About ContainerView" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -29,7 +30,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Alert" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide ContainerView" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +48,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Alert" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit ContainerView" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -628,7 +629,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Alert Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="ContainerView Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -642,7 +643,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Alert" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ContainerView" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -668,38 +669,120 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Alert" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ContainerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNz-sM-Y3E">
-                                <rect key="frame" x="176" y="89" width="128" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="OMN-MZ-PgL">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wi9-pA-dRb">
-                                <rect key="frame" x="205" y="146" width="70" height="32"/>
-                                <buttonCell key="cell" type="push" title="Alert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ba7-qU-Thg">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="cQV-AH-UmI">
+                                <rect key="frame" x="192" y="0.0" width="288" height="270"/>
                                 <connections>
-                                    <action selector="showAlert:" target="XfG-lQ-9wD" id="dy8-XU-CbH"/>
+                                    <segue destination="mjO-mk-Ski" kind="embed" id="lPK-Fw-yHz"/>
                                 </connections>
-                            </button>
+                            </containerView>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="lkq-aR-vUz">
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="270"/>
+                                <connections>
+                                    <segue destination="zW5-rN-reT" kind="embed" id="rRa-oP-lGI"/>
+                                </connections>
+                            </containerView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lkq-aR-vUz" secondAttribute="bottom" id="6qZ-04-6sA"/>
+                            <constraint firstItem="lkq-aR-vUz" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="O4D-xY-hF0"/>
+                            <constraint firstItem="lkq-aR-vUz" firstAttribute="top" secondItem="cQV-AH-UmI" secondAttribute="top" id="TKV-bU-Bmf"/>
+                            <constraint firstAttribute="trailing" secondItem="cQV-AH-UmI" secondAttribute="trailing" id="TRu-Hr-iFj"/>
+                            <constraint firstItem="lkq-aR-vUz" firstAttribute="bottom" secondItem="cQV-AH-UmI" secondAttribute="bottom" id="XYc-Qw-DvS"/>
+                            <constraint firstItem="cQV-AH-UmI" firstAttribute="leading" secondItem="lkq-aR-vUz" secondAttribute="trailing" id="bQI-Ua-V0d"/>
+                            <constraint firstItem="lkq-aR-vUz" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="oGx-lc-49L"/>
+                            <constraint firstItem="lkq-aR-vUz" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" multiplier="0.4" id="qxM-XD-Npo"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="label" destination="wNz-sM-Y3E" id="YpH-7C-Xr9"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--left-->
+        <scene sceneID="2c6-as-hjl">
+            <objects>
+                <viewController title="left" id="zW5-rN-reT" customClass="SiderBarVC" customModule="ContainerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="PPE-SO-ScO">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qNC-Ve-k9j">
+                                <rect key="frame" x="185" y="133" width="81" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jIE-WF-mWk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonTap:" target="zW5-rN-reT" id="dv0-6X-mgd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qNC-Ve-k9j" firstAttribute="centerX" secondItem="PPE-SO-ScO" secondAttribute="centerX" id="c8N-4g-mZs"/>
+                            <constraint firstItem="qNC-Ve-k9j" firstAttribute="centerY" secondItem="PPE-SO-ScO" secondAttribute="centerY" id="mpT-Jl-6yn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="qNC-Ve-k9j" id="4rf-pK-UEp"/>
+                    </connections>
+                </viewController>
+                <customObject id="ysA-N1-JAS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="1124"/>
+        </scene>
+        <!--right-->
+        <scene sceneID="oPh-K1-5Dp">
+            <objects>
+                <viewController title="right" id="mjO-mk-Ski" customClass="MainVC" customModule="ContainerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="BmH-S2-QFG">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="qNC-Ve-k9j" id="Igd-AT-p4z"/>
+                    </connections>
+                </viewController>
+                <customObject id="QhP-By-oSm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="1124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="g8L-y4-Opa">
+            <objects>
+                <viewController storyboardIdentifier="Popover" id="1xN-Jr-naY" sceneMemberID="viewController">
+                    <view key="view" identifier="Popover" id="V1K-PA-RxH">
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="101"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K5a-NQ-yoC">
+                                <rect key="frame" x="43" y="39" width="96" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="9Uj-Cv-aDQ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UvM-0a-6YJ">
+                                <rect key="frame" x="147" y="38" width="24" height="24"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="FE2-mC-iWA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="JGE-kE-rha" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183.5" y="1431.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>
