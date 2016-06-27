@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Alert/Alert.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:OutlineView/OutlineView.xcodeproj">
    </FileRef>
    <FileRef
